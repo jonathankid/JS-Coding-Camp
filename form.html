@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <!-- <form>
+            <input
+            type="text"
+            id="username"
+            required
+            minlength="3"
+            placeholder="Username"
+            />
+            <br/>
+            <input type="email" id="email" required
+            placeholder="Email" />
+            <br/>
+            <button type="submit">Submit</button>
+        </form> -->
+        <form onsubmit="return validateForm()">
+            <input id="email" type="email" />
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <script>
+            function validateForm() {
+                const email = document.getElementById("email"). value;
+                const emaiRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+s/;
+                if (!emailRegex.test(email)) {
+                    alert("Invalid email format");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
